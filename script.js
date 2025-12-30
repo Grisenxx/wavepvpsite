@@ -1,6 +1,6 @@
 // Server Configuration
 const SERVER_CONFIG = {
-    cfxServerID: 'bjj7mb', // CFX.re server ID
+    cfxServerID: 'WAVEPVP', // CFX.re server ID
     discordInvite: 'https://discord.gg/wavepvp', // Discord invite link
     discordInviteCode: 'wavepvp', // Kun invite koden (efter discord.gg/)
     restartTimes: [0, 6, 12, 18], // Restart tidspunkter (timer i 24-timers format)
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function initializeWebsite() {
     // Connect code sættes når vi henter server data
-    elements.connectCode.textContent = 'Indlæser...';
+    elements.connectCode.textContent = 'Connecting...';
     
     // Set up Discord link
     elements.discordLink.href = SERVER_CONFIG.discordInvite;
@@ -223,7 +223,7 @@ function connectToServer() {
     // Vis fallback instruktioner efter kort forsinkelse
     setTimeout(function() {
         const connectCode = elements.connectCode.textContent;
-        if (confirm('Hvis FiveM ikke åbnede automatisk, skal du kopiere denne kode og indsætte den i FiveM konsollen (F8):\n\n' + connectCode + '\n\nVil du kopiere koden nu?')) {
+        if (confirm('If FiveM did not open automatically, copy this code and paste it into the FiveM console (F8):\n\n' + connectCode + '\n\nDo you want to copy the code now?')) {
             copyConnectCode();
         }
     }, 2000);
@@ -635,4 +635,5 @@ document.addEventListener('DOMContentLoaded', function() {
         box.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(box);
     });
+
 });
