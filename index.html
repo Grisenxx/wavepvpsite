@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAVEPVP</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="shortcut icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <!-- <img src="logo.png" alt="WAVEPVP Logo" class="hero-logo"> -->
+                    <h1 class="hero-title">
+                        <span class="title-main">WAVEPVP</span>
+                        <span class="title-sub"></span>
+                    </h1>
+                    <p class="hero-description">
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="connectToServer()">
+                            <i class="fas fa-play"></i>
+                            Connect to Server
+                        </button>
+                        <a href="#" class="btn btn-secondary" id="discord-link">
+                            <i class="fab fa-discord"></i>
+                            Join Discord
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="server-status">
+                        <div class="status-indicator online"></div>
+                        <span id="server-status-text">0 Players Online</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="stats" class="stats-section">
+            <div class="stats-container">
+                <h2 class="section-title">Live Stats</h2>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-number" id="player-count">-/-</div>
+                            <div class="stat-label">Players Online</div>
+                        </div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-icon">
+                            <i class="fab fa-discord"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-number" id="discord-count">-</div>
+                            <div class="stat-label">Discord Members</div>
+                        </div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-number" id="uptime">2 hours, 5 minutes</div>
+                            <div class="stat-label">Next Restart</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="connect-section">
+            <div class="connect-container">
+                <div class="connect-card">
+                    <h3>Connect</h3>
+                    <p>Copy this connect code, and paste it into the FiveM console:</p>
+                    <div class="connect-code-container">
+                        <code class="connect-code" id="connect-code">connect din.server.ip:30120</code>
+                        <button class="copy-button" onclick="copyConnectCode()">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <div class="connect-steps">
+                        <div class="step">
+                            <span class="step-number">1</span>
+                            <span>Open FiveM</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">2</span>
+                            <span>Press F8</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">3</span>
+                            <span>Paste the connect code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>WAVEPVP</h3>
+                    <p>Danmarks mest intense FiveM PvP oplevelse</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="#">Discord Server</a></li>
+                        <li><a href="#">Server Regler</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+            </div> -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 WAVEPVP. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
