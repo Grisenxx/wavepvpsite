@@ -140,11 +140,240 @@ body {
     transform: translateY(-2px);
 }
 
+.btn-game {
+    background: linear-gradient(135deg, #6bb8ff, #529bee);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(107, 176, 255, 0.3);
+}
+
+.btn-game:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(107, 176, 255, 0.4);
+    background: linear-gradient(135deg, #6bb8ff, #529bee);
+}
+
+/* Inline Car Game */
+.car-game-inline {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.car-game-inline .game-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.car-game-inline .game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 420px;
+}
+
+.car-game-inline .score-display {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.car-game-inline .score-label {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.car-game-inline .score-value {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.car-game-inline .high-score-display {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+}
+
+.car-game-inline .trophy-icon {
+    font-size: 0.8rem;
+}
+
+.car-game-inline .high-score-value {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.car-game-inline #carGameCanvas {
+    border-radius: 12px;
+    display: block;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    background: #2a2a2a;
+}
+
+.car-game-inline .game-over-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(26, 26, 26, 0.98);
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    color: white;
+    display: none;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    min-width: 280px;
+}
+
+.car-game-inline .game-over-overlay h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.car-game-inline .game-over-stats {
+    margin-bottom: 20px;
+}
+
+.car-game-inline .game-over-stat {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.car-game-inline .game-over-stat:last-child {
+    border-bottom: none;
+}
+
+.car-game-inline .game-over-stat .label {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.car-game-inline .game-over-stat .value {
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.car-game-inline .game-over-stat .value.highlight {
+    color: #6bb8ff;
+}
+
+.car-game-inline .restart-btn, .close-game-btn {
+    width: 100%;
+    padding: 12px 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    background: #6bb8ff;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    margin-bottom: 8px;
+}
+
+.close-game-btn {
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 0;
+}
+
+.car-game-inline .restart-btn:hover, .close-game-btn:hover {
+    transform: translateY(-2px);
+}
+
+.car-game-inline .restart-btn:hover {
+    background: #529bee;
+}
+
+.close-game-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.car-game-inline .controls-hint {
+    margin-top: 15px;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.car-game-inline .key-hint {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.car-game-inline .key {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+    min-width: 24px;
+    text-align: center;
+}
+
+.car-game-inline .game-stats {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.car-game-inline .stat-item {
+    text-align: center;
+}
+
+.car-game-inline .stat-item .value {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.car-game-inline .stat-item .label {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 4px;
+}
+
+/* Car Game Section - Removed as we now use inline version */
+
 .hero-visual {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     animation: fadeInRight 1s ease-out;
+    min-height: 500px;
 }
 
 .server-status {

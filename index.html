@@ -27,6 +27,10 @@
                             <i class="fas fa-play"></i>
                             Connect to Server
                         </button>
+                        <button class="btn btn-game" onclick="playCarGame()">
+                            <i class="fas fa-car"></i>
+                            Car Game
+                        </button>
                         <a href="#" class="btn btn-secondary" id="discord-link">
                             <i class="fab fa-discord"></i>
                             Join Discord
@@ -37,6 +41,71 @@
                     <div class="server-status">
                         <div class="status-indicator online"></div>
                         <span id="server-status-text">0 Players Online</span>
+                    </div>
+                    
+                    <!-- Car Game Container -->
+                    <div id="car-game-container" class="car-game-inline" style="display: none;">
+                        <div class="game-wrapper">
+                            <div class="game-header">
+                                <div class="score-display">
+                                    <span class="score-label">Score</span>
+                                    <span class="score-value" id="car-score">0</span>
+                                </div>
+                                <div class="high-score-display">
+                                    <span class="trophy-icon">🏆</span>
+                                    <span class="high-score-value" id="car-highScore">0</span>
+                                </div>
+                            </div>
+
+                            <canvas id="carGameCanvas" width="420" height="500"></canvas>
+
+                            <div class="game-over-overlay" id="car-gameOver">
+                                <h2>Game Over</h2>
+                                <div class="game-over-stats">
+                                    <div class="game-over-stat">
+                                        <span class="label">Score</span>
+                                        <span class="value highlight" id="car-finalScore">0</span>
+                                    </div>
+                                    <div class="game-over-stat">
+                                        <span class="label">Highscore</span>
+                                        <span class="value" id="car-finalHighScore">0</span>
+                                    </div>
+                                    <div class="game-over-stat">
+                                        <span class="label">Biler undgået</span>
+                                        <span class="value" id="car-finalDodged">0</span>
+                                    </div>
+                                </div>
+                                <button class="restart-btn" onclick="restartCarGame()">Prøv igen</button>
+                                <button class="close-game-btn" onclick="hideCarGame()">Luk spil</button>
+                            </div>
+
+                            <div class="controls-hint">
+                                <div class="key-hint">
+                                    <span class="key">←</span>
+                                    <span class="key">→</span>
+                                </div>
+                                <span>eller</span>
+                                <div class="key-hint">
+                                    <span class="key">A</span>
+                                    <span class="key">D</span>
+                                </div>
+                            </div>
+
+                            <div class="game-stats">
+                                <div class="stat-item">
+                                    <div class="value" id="car-speedValue">60</div>
+                                    <div class="label">KM/H</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="value" id="car-dodgedCars">0</div>
+                                    <div class="label">Undgået</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="value" id="car-gameTime">0</div>
+                                    <div class="label">Sekunder</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
