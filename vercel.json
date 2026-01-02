@@ -1,11 +1,11 @@
 {
     "rewrites": [
         {
-            "source": "/docs",
+            "source": "/rules",
             "destination": "<https://proxy.gitbook.site/sites/site_wozLf>"
         },
         {
-            "source": "/docs/:match*",
+            "source": "/rules/:match*",
             "destination": "<https://proxy.gitbook.site/sites/site_wozLf>/:match*"
         }
     ]
