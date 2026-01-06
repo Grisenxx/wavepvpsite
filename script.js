@@ -1,6 +1,6 @@
 // Server Configuration
 const SERVER_CONFIG = {
-    cfxServerID: 'WAVEPVP', // CFX.re server ID
+    cfxServerID: '53d3yd', // CFX.re server ID
     discordInvite: 'https://discord.gg/wavepvp', // Discord invite link
     discordInviteCode: 'wavepvp', // Kun invite koden (efter discord.gg/)
     restartTimes: [0, 6, 12, 18], // Restart tidspunkter (timer i 24-timers format)
@@ -637,3 +637,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
+
